@@ -1,0 +1,21 @@
+{
+  "name": "angular-autosize",
+  "version": "0.0.1",
+  "authors": [
+    "Ethan Setnik <esetnik@gmail.com>"
+  ],
+  "description": "",
+  "main": "./dist/angular-autosize.js",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "autosize": "~3.0.13"
+  }
+}
