@@ -25,8 +25,23 @@
   'use strict';
   return angular.module('ngAutosize', [])
     .directive('autosize', function() {
-      return function(scope, element) {
-        autosize(element);
+      return {
+        scope: {
+          'submit': '&autosizeSubmit'
+        },
+        link: function(scope, element) {
+          autosize(element);
+          $(element)
+            .keypress(function(e) {
+              if (e.which == 13 && !e.shiftKey) {
+                if (scope.submit) {
+                  scope.submit();
+                }
+
+                e.preventDefault();
+              }
+            });
+        }
       };
     });
 }));
