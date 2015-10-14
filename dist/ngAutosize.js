@@ -33,7 +33,7 @@
           autosize(element);
           $(element)
             .keypress(function(e) {
-              if (e.which == 13 && !e.shiftKey) {
+              if (e.which == 13 && !e.shiftKey && !e.altKey && !e.ctrlKey) {
                 if (scope.submit) {
                   scope.submit();
                 }
